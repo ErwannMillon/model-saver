@@ -1,0 +1,206 @@
+- id: "sd2.1-base"
+  enabled: True
+  model_path: "stabilityai/stable-diffusion-2-1-base"
+
+- id: "sd2.1-inpainting"
+  enabled: True
+  model_path: "stabilityai/stable-diffusion-2-inpainting"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+      - "text_encoder"
+
+- id: "custom"
+  enabled: True
+  model_path: "viccpoes/mj"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "tokenizer"
+
+- id: "mj2"
+  enabled: True
+  model_path: "viccpoes/mj2"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "tokenizer"
+
+- id: "photoreal"
+  enabled: True
+  model_path: "viccpoes/photoreal"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+      - "text_encoder"
+
+- id: "sd1.5"
+  enabled: True
+  description: "RunwayML Stable Diffusion 1.5"
+  model_path: "runwayml/stable-diffusion-v1-5"
+
+- id: "sd1.5-inpainting"
+  enabled: True
+  description: "RunwayML Stable Diffusion 1.5 in-painting"
+  model_path: "runwayml/stable-diffusion-inpainting"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+      - "text_encoder"
+
+# - id: "avatar_model"
+#   enabled: True
+#   model_path: "./dreams/avatar-model"
+#   conditioning_prompt: "close up kreatar style ilustration"
+#   negative_prompt: "low resolution, blurry image with artifacts"
+#   share_modules:
+#     id: "sd2.1-base"
+#     types:
+#       - "vae"
+#       - "feature_extractor"
+#       - "tokenizer"
+
+# - id: "mir_model"
+#   enabled: True
+#   model_path: "./dreams/mir-model"
+#   conditioning_prompt: "mir photography"
+#   negative_prompt: "low resolution, blurry image with artifacts"
+#   share_modules:
+#     id: "sd2.1-base"
+#     types:
+#       - "vae"
+#       - "feature_extractor"
+#       - "tokenizer"
+
+- id: "future_diffusion"
+  enabled: True
+  model_path: "nitrosocke/Future-Diffusion"
+  conditioning_prompt: "future style"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+# # - id: "redshift_diffusion_768"
+# #   enabled: True
+# #   model_path: "nitrosocke/redshift-diffusion-768"
+# #   conditioning_prompt: "redshift style"
+# #   share_modules:
+# #     id: "future_diffusion"
+# #     types:
+# #       - "tokenizer"
+# #       - "text_encoder"
+
+- id: "ghibli_diffusion"
+  enabled: True
+  model_path: "nitrosocke/Ghibli-Diffusion"
+  conditioning_prompt: "ghibli style"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "mo_di_diffusion"
+  enabled: True
+  model_path: "nitrosocke/mo-di-diffusion"
+  conditioning_prompt: "modern disney style"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+
+- id: "elden_ring_diffusion"
+  enabled: True
+  model_path: "nitrosocke/elden-ring-diffusion"
+  conditioning_prompt: "elden ring style"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "inpunk_diffusion"
+  enabled: True
+  model_path: "Envvi/Inkpunk-Diffusion"
+  conditioning_prompt: "nvinkpunk"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "arcane_diffusion"
+  enabled: True
+  model_path: "nitrosocke/Arcane-Diffusion"
+  conditioning_prompt: "arcane style"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "robo_diffusion_2_base"
+  enabled: True
+  model_path: "nousr/robo-diffusion-2-base"
+  conditioning_prompt: "nousr robot"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd2.1-base"
+    types:
+      - "vae"
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "analog_diffusion"
+  enabled: True
+  model_path: "wavymulder/Analog-Diffusion"
+  conditioning_prompt: "analog style"
+  negative_prompt: "abstract image, image illustration, 3D render"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "wavy_diffusion"
+  enabled: True
+  model_path: "wavymulder/wavyfusion"
+  conditioning_prompt: "wa-vy style"
+  negative_prompt: "low resolution, blurry image with artifacts"
+  share_modules:
+    id: "sd1.5"
+    types:
+      - "feature_extractor"
+      - "tokenizer"
+
+- id: "sd-x2-latent-upscaler"
+  enabled: True
+  model_path: "stabilityai/sd-x2-latent-upscaler"
+  pipeline_class: "upscaler"

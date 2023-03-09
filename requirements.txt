@@ -1,0 +1,7 @@
+diffusers==0.14.0
+python-dotenv==1.0.0
+PyYAML==6.0
+torch==1.13.0
+PyYAML
+open-clip-torch
+
